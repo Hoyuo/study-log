@@ -14,7 +14,7 @@ Dart → 단일 Thread
 
 ## 111. Understand future in code
 
-```Dart
+```Text
 Future weatherFuture = getWeaterData();
 
 weatherFuture
@@ -28,7 +28,7 @@ weatherFuture
 
 ## 112. Using future 1
 
-```Dart
+```Text
 Future<int> myFuture = Future<int>.delayed)
     Duration(seconds: 1),
     () => 42,
@@ -37,7 +37,7 @@ Future<int> myFuture = Future<int>.delayed)
 
 ## 113. Async await
 
-```Dart
+```Text
 void main() async {
     final myFuture = await getWeatherData();
     print(myFuture);
@@ -55,7 +55,7 @@ Future<int> getWeatherData() async {
 
 ## 114. Try catch
 
-```Dart
+```Text
 try {
     final myFuture = getWeatherData();
     
@@ -83,7 +83,7 @@ $dart pug get http
 
 quote_model을 만들어 봅시다
 
-```Dart
+```Text
 class Quote {
   int? id;
   String? quote;
@@ -107,7 +107,7 @@ class Quote {
 }
 ```
 
-```Dart
+```Text
 void main(List<String> arguments) {
   getQuote();
 }
@@ -127,7 +127,7 @@ Future<void> getQuote() async {
 
 ## 117. Handling exceptions
 
-```Dart
+```Text
 Future<void> getQuote() async {
   try {
     final url = Uri.parse('https://dummyjson.com/quotes/1');
@@ -155,7 +155,7 @@ Future<void> getQuote() async {
 
 ## 119. Stream in code
 
-```Dart
+```Text
 import 'dart:io';
 import 'dart:convert';
 
@@ -175,13 +175,13 @@ void main(List<String> arguments) async {
 
 ## 120. Chunk data in stream
 
-```Dart
+```Text
 출력된 곳에서 1 - , 2 - 를 찾아보면 진짜로 데이터가 읽은 단위별로 전송 되어서 보내진다
 ```
 
 ## 121. Stream transformer
 
-```Dart
+```Text
 stream.transform(utf8.decoder).listen((data) {
   print("${i++} - $data");
 });
@@ -194,7 +194,7 @@ stream.transform(utf8.decoder).listen((data) {
 ## 122. Create stream
 - 직접 만들어서 사용하는 경우는 거의 없지만 일단 배워둔다
 
-    ```Dart
+    ```Text
     Stream<int> numbering() async* {
         for(int i=0; i<60; i++) {
             await Future.delayed(Duration(seconds: 1));
@@ -205,7 +205,7 @@ stream.transform(utf8.decoder).listen((data) {
 
 ## 123. Stream subscription
 
-```Dart
+```Text
 void main(List<String> arguments) async {
   late StreamSubscription<int> subscription;
   subscription = numbering().listen((event) {

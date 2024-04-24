@@ -16,8 +16,8 @@
 
 ## 35-1. What is function
 
-  ```Dart
-  void main(){
+  ```Text
+  void main() {
   
   }
   ```
@@ -30,15 +30,15 @@
 - 출구 값에 어떤 값이 나오는지 명시해줄 수 있다. int, double, string.
 - 어떤 데이터가 나올껀지 미리 결정 해 줄 수 있다.
 
-  ```Dart
-  String myNameInSentence(){
+  ```Text
+  String myNameInSentence() {
   }
   ```
 
 - 또한 입구(변수)에 어떤 데이터 값을 넣어줄 것인지 명시해 줄 수 있다.
 
-  ```Dart
-  String myNameInSentence(String name){
+  ```Text
+  String myNameInSentence(String name) {
   }
   ```
 
@@ -53,7 +53,7 @@
 - 옵션 값은 한 개 이상, 두 개도 가능하다.
 - 물음표 때문에 옵션 값이 가능하여
 
-  ```Dart
+  ```Text
   String myNameInSenetence(String lastName, String givenName, [String? middelName])
   // []로 묶은 곳은 ? 옵셔널로 선언해서 안 넣으면 자동으로 null이 들어간다. 그렇기 때문에 항상 맨 마지막에 넣어야 한다
   ```
@@ -83,7 +83,7 @@
 ## 42. Anonymous function
 - 변수를 생성할 때, 생성되는 변수의 Data Type 키워드를 사용하고, 변수의 명을 지정한 후 데이터를 저장해 준다. 저장된 데이터를 가지고 오기 위해 변수 명을 사용한다.
 
-  ```Dart
+  ```Text
   int someNumber = 10;
   ```
 
@@ -91,7 +91,7 @@
 - anonymous = 이름이 없다.
 - function의 이름을 없애고 addUp으로 function을 지정해 줄 수 있다.
 
-  ```Dart
+  ```Text
   Function(int, int) addUp = (int a, int b) {
       return a + b;
   };
@@ -101,15 +101,15 @@
 - function 사용.
 - ForEachCopy를 명시하고 사용한 부분. fnct를 declare한 부분(body가 있는 부분)을 어떻게 기능을 하는지?
 
-  ```Dart
-  void main(){
-      forEachCopy((int number){
+  ```Text
+  void main() {
+      forEachCopy((int number) {
           print(number);
       });
   
   }
   
-  void forEachCopy(Function(int) fnct){
+  void forEachCopy(Function(int) fnct) {
       fnct(5);
   }
   ```

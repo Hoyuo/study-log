@@ -21,7 +21,7 @@
 - 반대로 false 일 때, 코드값 실행이 안 된다
 
 ## 20. If else
-```Dart
+```Text
 if() {
 } else {
 }
@@ -37,11 +37,11 @@ if() {
 - Variable 변수를 생성해 주는데, 중괄호{} 하니씩 사용할 때마다 박스가 하나씩 생성된다. 박스 안(main)에서 밖(global)으로 접근이 가능하지만, 밖 에서 안으로는 접근이 불가능하다.
 - 중괄호{}를 기준점으로 그 안에서 생성된 Variable 은 그 안에서만 사용 가능하다. 예) void main 안에 if 문이 있는데 main 밖에서 if문을 사용하면 안된다.
 
-```Dart
+```Text
 void main() {
 
 }
-if(true{
+if (true) {
 
 }
 
@@ -53,7 +53,7 @@ If else 연장선을 줄여줄 것임. = (If else문을 한 줄로 만들어줄 
 
 한 줄에 나타내 줄 수 있음.
 
-```Dart
+```Text
 String message = (myHeight > 180)? 'I am tall': 'I am still tall';
 ```
 
@@ -65,19 +65,19 @@ is else문을 switch문으로 생성해주기.
 
 차이점 =
 
-```Dart
+```Text
 switch() {
    case :
     print();
     break;
 
     default : 
-      (만족하는 case가 없으면 default 부분 실행. (단 마지막에 넣어주기 때문에 break 생략 가능.)
+      (만족하는 case 가 없으면 default 부분 실행. (단 마지막에 넣어주기 때문에 break 생략 가능.)
 }
 
 ```
 
-```Dart
+```Text
 switch() {
   case :
     print();
@@ -94,7 +94,7 @@ switch 키워드 -> 괄호() 안에 변수를 넣어주고 중괄호{} 사용해
 
 만약에 각 다른 case를 같은 결과 값으로 한 곳에 나타내고 싶을 때, 다음과 같이 나타낼 수 있다. 예)
 
-```Dart
+```Text
 case 1:
   print('one');
   break;
@@ -118,14 +118,14 @@ case 2:
 - enum 데이터 생성 - string, int, double, var과 같은 데이터
 - EatChicken은 enum 타입의 생성자명. 중괄호{}를 통해 상태들을 나열해준다.
 
-```Dart
+```Text
 enum EatChicken {
     findPhoneNumber,
 }
 
 ```
 
-```Dart
+```Text
 enum EatChicken {
     findPhoneNumber,
        .......,
@@ -139,7 +139,7 @@ enum EatChicken {
 - EatChicken.none 상태에서 switch문 사용.
 - 변수의 이름을 임의로 바꿔줄 때: VSCode에서 F2 누르면 관련된 모든 변수 이름을 자동으로 바꿔준다. (중요!)
 
-```Dart
+```Text
 switch() {
   case:
     print();
@@ -161,7 +161,7 @@ if else / switch / if else if 문도 사용 가능.
 ## 27. Do while
 - while = while 문에서 비교한 후에 만족 하냐, 안하냐 따지고 중괄호{}안에 실행을 해주는지 안해주는 지 판단해줬다. do while = 일단 실행 후 while(조건문)를 통해서 비교 후에 만족을 하면 다시 실행.
 
-```Dart
+```Text
 do {
 
 } while();
@@ -172,13 +172,13 @@ do {
 - loop이 평생 돌아가게 실수를 할 수도 있음.
 - (조심)loop을 빠져나오게 하고 싶을 떄, if문 사용 가능.
 
-```Dart
+```Text
 do {
   number++;
-  if(number > 7) {
+  if (number > 7) {
     break;
-   }
-} while(true);
+  }
+} while (true);
 
 ```
 
@@ -191,7 +191,7 @@ do {
 - import 'dart:math'; - 수학 관련 수식을 가지고 온다
 - Random().nextInt(3); // 0~2 사이의 숫자 중 하나의 정수를 int로 가져온다.
 
-```Dart
+```Text
 while(number != 2) {
     number = Random().nextInt(3);
     print(number);
@@ -207,8 +207,8 @@ print('The End - $number');
 - Breakpoint = 코드가 실행되다가 빨간 불 있는 곳에서 코드 멈춤.
 - Continue F5를 누르면 Break point를 벗어나서 계속 코드 진행 한다.
 
-```Dart
-for(int i=0; i<10; i++) {
+```Text
+for (int i=0; i<10; i++) {
 }
 ```
 
@@ -221,9 +221,9 @@ for(int i=0; i<10; i++) {
 ## 32. For in loop
 - for(var char) 코드는 각각의 캐릭터를 말해준다. 예) Rainbow - R, a, i, n ... 각각이 모여 한개의 String을 이루고 있다. 유니코드를 통해 코드를 전달해 준다.
 
-```Dart
+```Text
 String str = 'abcdef';
-for(var ch in str) {
+for (var ch in str) {
 }
 ```
 
@@ -231,8 +231,8 @@ for(var ch in str) {
 
 ## 33. For each
 
-```Dart
-for(var number in list) {
+```Text
+for (var number in list) {
     print(number);
 }
 ```
@@ -240,7 +240,7 @@ for(var number in list) {
 - for in loop을 간단하게 만들어 준다.
 - 1~10까지의 수를 55로 프린트할 수 있게끔 만들어주기.
 
-```Dart
+```Text
 void main() {
     var list = [1,2,3,4,5,6,7,8,9,10];
     int result = 0;
@@ -258,6 +258,6 @@ void main() {
 - 만약 for loop을 한 줄로 만들어주고 싶다면, statement 실행해주는 액션 부분이 딱 한줄만 있어야 하고 `;, {}` 없애주고 `=>` 무조건 있어야 한다.
 - for loop을 한 줄로 만들어주고 싶을 때, statement(실행해 주는 action 부분)가 딱 한 줄만 있어야 한다. 만약 loop을 실행하는데 한 줄 이상이라면, 한 줄로 해결 가능한 방법이 현재로선 없다
 
-```Dart
+```Text
 list.forEach((number) => result += number);
 ```

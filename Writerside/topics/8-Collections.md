@@ -14,7 +14,7 @@
 - 각 데이터에 순서데로 0부터 번호를 부여한다.
 - 부여된 번호는 `index`라고 부른다.`index`를 통해 각 데이터를 가져올 수 있다.
 
-```Dart
+```Text
 var alphabets = [
 'A',  // index 0 
 'B',  // index 1 
@@ -47,11 +47,11 @@ var alphabets = [
 
 Dart는 자동으로 리스트 안에 데이터가 String이라는 것을 알고 alphabets리스트를 아래 데이터 키워드처럼 변수를 고정시킨다. 한번 고정된 변수는 변경할 수 없다.
 
-```Dart
+```Text
 List<String> alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 ```
 
-```Dart
+```Text
 var alphabets = [];
 ```
 
@@ -60,42 +60,42 @@ var alphabets = [];
 - dynamic으로 고정.
 - **empty List를 생성시 아래처럼 생성하자.**
 
-```Dart
+```Text
 List<String> alphabets = [];
 var alphabets = <String>[];
 ```
 
 - **get the value in the index**
 
-```Dart
+```Text
 final third = alphabets[2];
 print(third);
 ```
 
 - **get an index of the value. it can be `null`**
 
-```Dart
+```Text
 final index = alphabets.indexOf('D');
 final value = alphabets[index];
 ```
 
 - **assign new value into an index**
 
-```Dart
+```Text
 alphabets[1] = 'ABC';
 print(alphabets);
 ```
 
 - **add an element to a list**
 
-```Dart
+```Text
 alphabets.add('this is all!!');
 print(alphabets);
 ```
 
 - **remove an element from the list**
 
-```Dart
+```Text
 alphabets.remove('A');
 print(alphabets);
 ```
@@ -103,7 +103,7 @@ print(alphabets);
 ## 84. Unmodifiable List
 - **새로운 `List`를 생성 후 변수에 assign할 수 있다.**
 
-```Dart
+```Text
 var alphabet = ['A', 'B', 'C', 'D'];
 alphabet = [];
 alphabet = ['A', 'B', 'C', 'D'];
@@ -112,7 +112,7 @@ alphabet = ['A', 'B', 'C', 'D'];
 - **`final Lists` 성격을 파헤쳐보자.**
     - 만약에 `var` 대신 `final`을 사용한다면, 에러가 발생한다.
 
-        ```Dart
+        ```Text
         final alphabet = ['A', 'B', 'C', 'D'];
         alphabet = [];
         alphabet = ['A', 'B'];
@@ -120,7 +120,7 @@ alphabet = ['A', 'B', 'C', 'D'];
 
     - 이는 alphabet이라는 `List`변수에 새로운 `List`를 생성해서 assign할 수 없다는 뜻이다. 다음 코드를 보자.
 
-        ```Dart
+        ```Text
         final alphabet = ['A', 'B', 'C', 'D'];
         desserts.remove('A');// OK
         desserts.remove('B');// OK
@@ -131,7 +131,7 @@ alphabet = ['A', 'B', 'C', 'D'];
     - `final` 우리가 죽기전까지 살 마지막 집. 집은 변함이 없지만 집 안에 있는 가구나 살림은 언제든 변경이 가능하다.
 - **모든 elements도 변경이 불가능하게 하고 싶다면??**
 
-    ```Dart
+    ```Text
     const alphabet = ['A', 'B', 'C', 'D'];
     alphabet = [];// Error
     alphabet = ['A', 'B'];// Error
@@ -142,7 +142,7 @@ alphabet = ['A', 'B', 'C', 'D'];
 
 - **`const`를 사용할 수 없는 상황에서는?**
 
-    ```Dart
+    ```Text
     final alphabet = const ['A', 'B', 'C', 'D'];
     alphabet = [];// Error
     alphabet = ['A', 'B'];// Error
@@ -153,40 +153,40 @@ alphabet = ['A', 'B', 'C', 'D'];
 
 - **immutable list를 원하지만 사용될때까지 값이 뭔지 모른다면?? `List.unmodifiable`를 사용하자.**
 
-    ```Dart
+    ```Text
     final modifiableList = ['A'.toLowerCase(), 'B'.toLowerCase(), 'C'.toLowerCase()];
     final unmodifiableList = List.unmodifiable(modifiableList);
     ```
 
 ## 85. List Properties
 
-```Dart
+```Text
 const alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 ```
 
 - **Access first and last elements**
 
-    ```Dart
+    ```Text
     print(alphabets.first);
     print(alphabets.last);
     ```
 
 - **the List contains any elements**
 
-    ```Dart
+    ```Text
     print(alphabets.isEmpty);
     print(alphabets.isNotEmpty);
     ```
 
 - **the List contains any elements**
 
-    ```Dart
+    ```Text
     print(alphabets.contains('a'));
     ```
 
 - **the List length**
 
-    ```Dart
+    ```Text
     print(alphabets.length);
     print(alphabets.length == 0);
     print(alphabets.length > 0);
@@ -194,7 +194,7 @@ const alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','
 
 ## 86. Loop list
 
-```Dart
+```Text
 for (var alphabet in alphabets) {
     print(alphabet);
 }
@@ -204,14 +204,14 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **output of `forEach` is same as input of `print`**
 
-    ```Dart
+    ```Text
     alphabets.forEach(print);
     ```
 
 ## 87. Useful operators for lists
 - **Spread operator**
 
-    ```Dart
+    ```Text
     const kia = ['k3', 'k5', 'sorento'];
     const hyundai = ['sonata', 'avante', 'palisade'];
     
@@ -221,7 +221,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **`null` spread operator**
 
-    ```Dart
+    ```Text
     const kia = ['k3', 'k5', 'sorento'];
     const hyundai = ['sonata', 'avante', 'palisade'];
     List<String>? deawoo;
@@ -232,7 +232,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **collection if**
 
-    ```Dart
+    ```Text
     const kids = true;
     
     const sandwich = [
@@ -248,7 +248,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **collection for**
 
-    ```Dart
+    ```Text
     const spices = ['jalapeno', 'wasabi'];
     
     List<String> sandwich = [
@@ -265,19 +265,19 @@ alphabets.forEach((alphabet) => print(alphabet));
 ## 88. Challenge lists
 - **Quiz 1. 1월부터 12월까지 영어로 된 리스트를 생성해보자.**
 
-    ```Dart
+    ```Text
     List<String> months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
     ```
 
 - **Quiz 2. 생성된 리스트를 싹 비우자.**
 
-    ```Dart
+    ```Text
     months.clear();
     ```
 
 - **Quiz 3. 리스트를 다시 1월부터 6월까지 영어로 `add`메소드를 사용해 채워보자.**
 
-    ```Dart
+    ```Text
     months.add('JAN');
     months.add('FEB');
     // ... 
@@ -286,7 +286,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Quiz 4. 7월부터 12월까지는 `for loop`을 사용해 채워보자.**
 
-    ```Dart
+    ```Text
     List<String> temp = ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
     for(var month in temp) {
         months.add(month);
@@ -295,7 +295,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Quiz 5. 전부 소문자/대문자로 변경해보자.**
 
-    ```Dart
+    ```Text
     for(int i=0; i<months.length; i++) {
         months[i] = months[i].toLowerCase();
                             = months[i].toUpperCase();
@@ -307,14 +307,14 @@ alphabets.forEach((alphabet) => print(alphabet));
 - `index`가 없다.동일한 element를 반복할 수 없다.
 - **Creating a set**
 
-    ```Dart
+    ```Text
     final Set<int> someSet = {};
     final someSet = <int>{};
     ```
 
 - **prove no duplicates**
 
-    ```Dart
+    ```Text
     final anotherSet = {1, 2, 3, 1};
     print(anotherSet);
     ```
@@ -322,7 +322,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 ## 90. Operations on a set
 - **Contains**
 
-    ```Dart
+    ```Text
     Set<String> alphabets = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
     print(alphabets.contains('A'));// true
     print(alphabets.contains('AB'));// false
@@ -330,7 +330,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Adding single elements**
 
-    ```Dart
+    ```Text
     final alphabets = <String>{};
     alphabets.add('A');
     alphabets.add('B');
@@ -340,7 +340,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Removing elements**
 
-    ```Dart
+    ```Text
     final alphabets = <String>{};
     print(alphabets.remove('A'));
     print(alphabets);
@@ -348,7 +348,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Adding multiple elements**
 
-    ```Dart
+    ```Text
     final alphabets = <String>{};
     alphabets.addAll(['D', 'E', 'F']);
     print(alphabets);
@@ -356,7 +356,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Intersections**
 
-    ```Dart
+    ```Text
     Set<String> aSet = {'A','B','C','D','E','F'};
     Set<String> bSet = {'A','B','W','X','Y','Z'};
     final intersection = aSet.intersection(bSet);
@@ -365,7 +365,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Unions**
 
-    ```Dart
+    ```Text
     Set<String> aSet = {'A','B','C','D','E','F'};
     Set<String> bSet = {'A','B','W','X','Y','Z'};
     final union = aSet.union(bSet);
@@ -384,14 +384,14 @@ alphabets.forEach((alphabet) => print(alphabet));
 - key를 통해 value를 찾을 수 있는 구조이다.순서가 없다.key는 유니크해야 한다.
 - **create a Map**
 
-    ```Dart
+    ```Text
     final Map<String, int> emptyMap = {};
     final emptyMap = <String, int>{};
     ```
 
   Maps and Sets 다 `{}`를 사용한다. 아래는 Map일까? Set일까?
 
-    ```Dart
+    ```Text
     final mapOrSet = {};
     ```
 
@@ -399,7 +399,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Initialize a Map with values**
 
-    ```Dart
+    ```Text
     final foods = {
       'cakes': 2,
       'eggs': 6,
@@ -419,7 +419,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Key는 반드시 Unique해야한다.**
 
-    ```Dart
+    ```Text
     //not works
     final foods = {
       'eggs': 2,
@@ -439,7 +439,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 ## 92. Operations on a map_1
 - **Access a element**
 
-    ```Dart
+    ```Text
     final foods = {
       'cakes': 2,
       'eggs': 6,
@@ -452,21 +452,21 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **?.**
 
-    ```Dart
+    ```Text
     final numOfButter = foods['butter'];
     print(numOfButter?.isEven);
     ```
 
 - **add new element**
 
-    ```Dart
+    ```Text
     foods['butter'] = 3;
     print(foods);
     ```
 
 - **update a value**
 
-    ```Dart
+    ```Text
     print(foods['eggs']);
     foods['eggs'] = 3;
     print(foods['eggs']);
@@ -474,14 +474,14 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **remove an element**
 
-    ```Dart
+    ```Text
     foods.remove['eggs'];
     print(foods);
     ```
 
 - **Map properties**
 
-    ```Dart
+    ```Text
     foods.isEmpty// false
     foods.isNotEmpty// true
     foods.length
@@ -494,7 +494,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 ## 92. Loop through map_2
 - **looping through a map**
 
-    ```Dart
+    ```Text
     for (var item in foods.keys) {
       print(foods[item]);
     }
@@ -510,7 +510,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 - **개인 신상정보 Map으로 생성하기.**
     - name, profession, country, city등등.
 
-        ```Dart
+        ```Text
         final profile = {
             'name': 'victor',
             'profession': 'programmer',
@@ -522,14 +522,14 @@ alphabets.forEach((alphabet) => print(alphabet));
 - **갑자기 한국에서 미국 new york으로 이사를 갔다.**
     - country와 city를 변경해보자.
 
-        ```Dart
+        ```Text
         profile['country'] = 'united state';
         profile['city'] = 'new york';
         ```
 
 - **loop을 사용해 map을 log에 나타내자.**
 
-    ```Dart
+    ```Text
     profile.forEach((key, value) => print('$key : $value\n'));
     ```
 
@@ -538,7 +538,7 @@ alphabets.forEach((alphabet) => print(alphabet));
     - collection을 map메소드를 이용해서 새로운 Iterable<>을 생성할 수 있다.
     - `forEach`와 비슷하지만 다르다.
 
-        ```Dart
+        ```Text
         final alphabets = ['a', 'b', 'c', 'd', 'e'];
         final upAlphabets = alphabets.map((alphabet)=>alphabet.toUpperCase());
         
@@ -547,20 +547,20 @@ alphabets.forEach((alphabet) => print(alphabet));
 
     - 결과는 `MappedListIterable<String, String>` 이름이 길지만, `Iterable`이라는 것은 확실하다. `Iterable`은 Lists와 비슷한 것이라고 보면 된다. Lists가 기능은 더 많다.
 
-        ```Dart
+        ```Text
         print(upAlphabets);
         ```
 
     - 이 결과물을 보면 `(A, B, C, D, E)` 이렇게 표시된다. 이를 Lists로 변경해서 사용할 수 있다. `toList()`를 사용하면 된다.
 
-        ```Dart
+        ```Text
         final list = upAlphabets.toList();
         print(list);
         ```
 
     - 이 결과물을 보면 `[A, B, C, D, E]` 이렇게 표시된다. Sets로도 변경이 가능하다.
 
-        ```Dart
+        ```Text
         final sets = upAlphabets.toSet();
         print(sets);
         ```
@@ -570,7 +570,7 @@ alphabets.forEach((alphabet) => print(alphabet));
     - 다른 점만 분명히 알면 된다.
     - `map()`은 각각의 값을 변경후 `Iterable`안에 하나씩 넣어주고 `Iterable`을 return한다. 반면에 `forEach()`는 각각의 값을 가져와서 action을 취하고 끝!
 
-    ```Dart
+    ```Text
     final alphabets = ['a', 'b', 'c', 'd', 'e'];
     final upAlphabets = alphabets.map((alphabet)=>alphabet.toUpperCase());
     alphabets.forEach((alphabet)=>print(alphabet.toUpperCase()));
@@ -587,7 +587,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 ## 94. Higher order methods_2
 - **Filter by `where()`**
 
-    ```Dart
+    ```Text
     final numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     final evens = numbers.where((number) => number.isEven);
     print(evens);
@@ -595,7 +595,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 
 - **Consolidating a collection by `reduce()`**
 
-    ```Dart
+    ```Text
     final numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     final total = numbers.reduce((sum, number) => sum + number);
     print(total);
@@ -608,7 +608,7 @@ alphabets.forEach((alphabet) => print(alphabet));
 - **`fold()` instead of `reduce()`**
     - `reduce()`를 사용할때, lists가 empty이면 에러를 발생한다. 이를 방지하기 위해 `fold()`를 사용할 수 있다.
 
-    ```Dart
+    ```Text
     final numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     final total = numbers.fold(0,(int sum, number) => sum + number);
     print(total);
@@ -621,14 +621,14 @@ alphabets.forEach((alphabet) => print(alphabet));
 ## 95. Higher order methods
 - **`sort()`**
 
-```Dart
+```Text
 final alphabets = ['p','a','q','e','w','r','o','t','y','u','i','s','l','d','f','g','h','k','z','x','j','c','v','b','n','m'];
 alphabets.sort();
 ```
 
 - **`reversed`**
 
-```Dart
+```Text
 var alphabets = ['p','a','q','e','w','r','o','t','y','u','i','s','l','d','f','g','h','k','z','x','j','c','v','b','n','m'];
 alphabets.sort();
 print(alphabets);
@@ -638,7 +638,7 @@ print(reversedAlphabets);
 
 - **custom sorting**
 
-```Dart
+```Text
 final numbers = [6,3,5,4,7,2,9,1,8,10];
 numbers.sort((int d1, int d2) => d1.compareTo(d2));
 print(numbers);
@@ -646,7 +646,7 @@ print(numbers);
 
 - **Using multiple methods**
 
-```Dart
+```Text
 final numbers = [6, 3, 5, 4, 7, 2, 9, 1, 8, 10];
 var newSets = numbers
     .where((number) => number.isEven)
@@ -668,7 +668,7 @@ print(newSets);
 
 ## 97. Chanllenges collections
 
-```Dart
+```Text
 String paragragh = '컴퓨터와 인터넷 코딩 스킬만 가지고 여러분들이 상상하는 크레이지 한 것들을 만들 수 있습니다. 그런데 코딩 스킬을 배우는 방법이 여러 가지가 있어요. 이 중에서 정답은 없습니다.';
 var list = paragragh.split(' ');
 ```

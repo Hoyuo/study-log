@@ -4,19 +4,19 @@
 - **null이란, "no value" "value가 없다"라는 뜻이다. 어떤 상황에서는 이 데이터가 상당히 유용할 때가 있다.**
 - 간단한 예로 전화번호를 저장하는 `variable`이 있다. `String phone`이런 데이터 저장공간에 다음처럼 전화번호를 저장한다.
 
-  ```Dart
+  ```Text
   String phone = "01055555555";
   ```
 
 - 그런데 만약에 전화번호가 없다면??? 물론 전화번호가 없을 땐, 우리가 원하는 데이터로 전화번호가 없다는 것을 다음처럼 표시할 수 있다.
 
-  ```Dart
+  ```Text
   String phone = "none";
   ```
 
 - 문제는 다음과 같은 데이터를 다른 프로그래머가 자연스럽게 받아들이기보단, 프로그래머들 사이의 소통에 의해서 정확하게 이해 후 사용해야 한다. 만약에 `null`을 사용한다면, 이런 문제점이 말끔히 사라진다.
 
-  ```Dart
+  ```Text
   String phone = null;
   ```
 
@@ -28,7 +28,7 @@
 
 - `Dart 2.12`부터는 Sound Null Safety룰을 사용한다. 간단히 말하면, `null`이 가능한 데이터는 키워드를 사용할 때 이미 알 수 있다. 왜 이렇게 유용한 `null`을 막 사용할 수 없게 막아 놓았을까? 이유는 우리가 제작하는 프로그램에서 발생하는 대부분의 에러가 `null`때문이다. 유용하지만 이런 이유에서 `null`을 조심해서 사용할 수 있게 언어가 업그레이드 되었다. 다음 예를 통해 `null`의 에러 발생 상황을 보자.
 
-  ```Dart
+  ```Text
   class Car {
     int totalDistance = null;
   
@@ -49,7 +49,7 @@
 ## 76. Nullable
 - Variable에 널 저장이 가능하게 할 수 있다.
 
-  ```Dart
+  ```Text
   int? postCode = null;
   String? name = null;
   double? myHeight = null;
@@ -59,7 +59,7 @@
 
 ## 77. Handling nullable types
 
-  ```Dart
+  ```Text
   String? name;
   print(name.length);
   ```
@@ -78,7 +78,7 @@
 
 먼저 위와같은 경우는 아래처럼 고쳐서, `Compile-error`는 방지할 수 있다.
 
-  ```Dart
+  ```Text
   String? name;
   name = 'Victor';
   print(name.length);
@@ -86,7 +86,7 @@
 
 `if-else`를 통해 `null`값을 체크할 수 있다.
 
-  ```Dart
+  ```Text
   bool isPositive(int? anInteger) {
     if (anInteger == null) {
       return false;
@@ -100,7 +100,7 @@
 ## 78-1. Null aware operators 1
 - If-null operator (??)
 
-    ```Dart
+    ```Text
     String? message;
     final text = message ?? 'Error';
       
@@ -114,7 +114,7 @@
 
 - Null-aware assignment operator (??=)
 
-    ```Dart
+    ```Text
     int? volume;
       
     volume = volume ?? 5;
@@ -127,14 +127,14 @@
 
 - Null-aware access operator (?.)
 
-    ```Dart
+    ```Text
     int? age;
     print(age?.isNegative);
     ```
 
 - Null-aware method invocation operator (?.)
 
-    ```Dart
+    ```Text
     int? age;
     print(age?.isNegative);
       
@@ -143,7 +143,7 @@
 
 - Null assertion operator (!)
 
-    ```Dart
+    ```Text
     String nonNullableString = myNullableString!;
       
     bool? isBeautiful(String? item) {
@@ -163,7 +163,7 @@
 
 - Null-aware cascade operator (?..)
 
-    ```Dart
+    ```Text
     class User {
       String? name;
       int? id;
@@ -180,7 +180,7 @@
 
 - Null-aware index operator (?[])
 
-    ```Dart
+    ```Text
     List<int>? myList = [1, 2, 3];
     myList = null;
     int? myItem = myList?[2];
@@ -188,7 +188,7 @@
 
 ## 79. Init non nullable
 
-```Dart
+```Text
 class User {
   String name;
 }
@@ -230,7 +230,7 @@ class User {
 
 ## 80. Nullable scope
 
-  ```Dart
+  ```Text
   class User {
     User({this.name});
     String? name;
@@ -239,7 +239,7 @@ class User {
 
   - **No promotion for non-local variables**
 
-  ```Dart
+  ```Text
   //첫째코드
   bool isLong(String? text) {
     if (text == null) {
@@ -269,7 +269,7 @@ class User {
 
 맨 위에 코드는 괜찮았는데, 왜일까??? 이유는 첫째코드의 `text`는 local variable이고, 둘째 코드의 `text`는 instance variable이다. 즉 둘째 코드의 `text`는 `isLong()`메소드 이외에 다른 장소에서도 변경이 가능하기 때문에 `text`값을 확인한 직후에 어떤 일이 벌어질지 모른다. 그래서 컴파일러는 에러를 표시해준다. 단지, 프로그래머 입장에서 보면 다른곳에는 사용되는 부분이 없기 때문에 계속 진행해도 될것같다. 이럴때 사용하는것이 바로 `!`이다.
 
-  ```Dart
+  ```Text
   //둘째코드 고친것
   class TextWidget {
     String? text;
@@ -285,7 +285,7 @@ class User {
 
 또 다른 방법으로는 local `text` variable을 만들어주고 변경이 가능하지 않게 한다.
 
-  ```Dart
+  ```Text
   //둘째코드 고친것
   class TextWidget {
     String? text;
@@ -303,7 +303,7 @@ class User {
 
 ## 81. Late keyword
 
-  ```Dart
+  ```Text
   class User {
     User(this.name);
   
@@ -324,7 +324,7 @@ class User {
 
 `late`키워드를 사용하면, 해결이 가능하다.
 
-  ```Dart
+  ```Text
   late final int _secretNumber = _calculateSecret();
   
   //또는class User {
@@ -342,7 +342,7 @@ Dart에서 `late`키워드를 사용시 해당 데이터는 바로 생성되지 
 
 프로그래머가 컴파일러한테, "나만 믿어 절대 생성되기 이전에는 사용 안할거야!" 이렇게 말해놓고, 해당 데이터가 생성되기도 전에 사용하면 안된다!
 
-  ```Dart
+  ```Text
   class User {
     late String name;
   }
@@ -355,7 +355,7 @@ Dart에서 `late`키워드를 사용시 해당 데이터는 바로 생성되지 
 
 무거운 계산을 사용할지 안할지도 모르는데 미리 계산을 한 후에 기다리면 사용 안했을 땐, 리소스의 낭비이다. 이를 방지하기 위해 해당 계산결과가 사용되기 바로 전에 계산을 진행한다. 이를 코딩에서는 `lazy`라고 부른다. 결과값이 필요할때까지 기다렸다가 막판에서야 부랴부랴 계산을 진행한다.
 
-  ```Dart
+  ```Text
   class SomeClass {
     late String? value = doHeavyCalculation();
     String? doHeavyCalculation() {

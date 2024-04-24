@@ -2,7 +2,7 @@
 
 ## 98. Extend class
 
-```Dart
+```Text
 class Car{
     Car(int doors, int wheels) : _doors = doors, _wheels = wheels;
     int _doors;
@@ -17,7 +17,7 @@ class Car{
 
 - 기본 class를 이용해서 파생해서 여러 class를 만들 수 있다
 
-```Dart
+```Text
 class HyundaiCars extends Car {
   HyundaiCars(super.doors, super.wheels, this._hyundaiBadgeColor);
   int _hyundaiBadgeColor;
@@ -47,7 +47,7 @@ class HyundaiCars extends Car {
 ## 103. Extends class challenge
 1. class 이름을 Food이라고 만들자. int 타입의 calorie가 안에 있고, printCalorie메소드를 통해 calorie값을 print해보자
 
-    ```Dart
+    ```Text
     class Food {
       int _calorie;
     
@@ -62,7 +62,7 @@ class HyundaiCars extends Car {
 
 2. Food의 subClass를 만들어보자. 이름은 KoreanFood, 또 KoreanFood의 subClass로 Kimchi, Bulgogi, Galbitang을 만들자
 
-    ```Dart
+    ```Text
     class KoreanFood extends Food {
       KoreanFood(super.calorie);
     }
@@ -96,7 +96,7 @@ class HyundaiCars extends Car {
 
 ## 106-1. Instantiate abstract class
 
-```Dart
+```Text
 abstract class DataRepository {
     factory DataRepository.webSocket() => WebSocket();
     
@@ -116,7 +116,7 @@ class WebSocket implements DataRepository {
 ## 107. Interface challenge
 1. Camera 인터페이스 생성. shoot 메소드 포함
 
-    ```Dart
+    ```Text
     abstract class Camera {
       void shoot();
     }
@@ -124,7 +124,7 @@ class WebSocket implements DataRepository {
 
 2. DigitalCamera 클래스를 Camera를 implement 해서 생성, “png image file”라는 문구를 shoot메서드를 통해 출력
 
-    ```Dart
+    ```Text
     class DigitalCamera implements Camera {
         @override
       void shoot() {
@@ -135,7 +135,7 @@ class WebSocket implements DataRepository {
 
 3. Camera에 DigitalCamera를 return하는 factory constructor를 생성
 
-    ```Dart
+    ```Text
     abstract class Camera {
       factory Camera() => DigitalCamera();
     
@@ -145,7 +145,7 @@ class WebSocket implements DataRepository {
 
 4. main 메소드 안에 DigitalCamera인스턴스를 Camera factory constructor를 사용해 생성 후. shoot 메소드를 실행
 
-    ```Dart
+    ```Text
     void main(List<String> arguments) async {
       final camera = Camera();
       camera.shoot();
@@ -155,7 +155,7 @@ class WebSocket implements DataRepository {
 ## 108. Mixins
 - extends와 implement의 문제점에서 나온 해결점이다.
 
-```Dart
+```Text
 abstract class Bird {
     void fly();
     void layEggs();
@@ -192,7 +192,7 @@ class Ostrich extends Bird {
 
 ## 109. Mixin in code
 
-```Dart
+```Text
 class Pigeon with EggLayer, Flyer { } // <- 재사용한다
 
 class Oscritch implements EggLyaer {
