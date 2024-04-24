@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Dart Flutter"
+                 start-page="Home.md">
+
+    <toc-element topic="Home.md"/>
+    <toc-element topic="Dart.md">
+        <toc-element topic="1-hello-dart.md"/>
+        <toc-element topic="2-Expression-Variables-Constants.md"/>
+        <toc-element topic="3-Types-Opertations.md"/>
+        <toc-element topic="4-Control-Flow.md"/>
+        <toc-element topic="5-Function.md"/>
+        <toc-element topic="6-Classes.md"/>
+        <toc-element topic="7-Nullability.md"/>
+        <toc-element topic="8-Collections.md"/>
+        <toc-element topic="9-Advanced-Classes.md"/>
+        <toc-element topic="10-Asynchronous-Programming.md"/>
+    </toc-element>
+    <toc-element topic="Flutter.md">
+        <toc-element topic="1-First-Flutter-App.md"/>
+        <toc-element topic="2-Everything-is-a-widget.md"/>
+        <toc-element topic="3-What-is-the-widget.md"/>
+        <toc-element topic="4-Scrollable-Widget.md"/>
+        <toc-element topic="5-Interactive-Widget.md"/>
+        <toc-element topic="6-Deep-links-Web-URLs.md"/>
+        <toc-element topic="7-Shared-Preferences.md"/>
+        <toc-element topic="8-Json.md"/>
+        <toc-element topic="9-Networking.md"/>
+        <toc-element topic="10-Network-Library.md"/>
+        <toc-element topic="11-State-Management.md"/>
+        <toc-element topic="12-Stream.md"/>
+        <toc-element topic="13-Database-with-SQLite.md"/>
+        <toc-element topic="14-Database-with-drift.md"/>
+    </toc-element>
+</instance-profile>
