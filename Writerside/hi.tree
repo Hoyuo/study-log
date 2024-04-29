@@ -7,6 +7,7 @@
                  start-page="Home.md">
 
     <toc-element topic="Home.md"/>
+    <toc-element topic="Algorithm.md"/>
     <toc-element topic="Dart.md">
         <toc-element topic="1-hello-dart.md"/>
         <toc-element topic="2-Expression-Variables-Constants.md"/>
@@ -35,4 +36,13 @@
         <toc-element topic="13-Database-with-SQLite.md"/>
         <toc-element topic="14-Database-with-drift.md"/>
     </toc-element>
+    <toc-element topic="Compose.md">
+        <toc-element topic="1-Settings.md">
+            <toc-element topic="Setting-Screen.md"/>
+            <toc-element topic="Setting-ViewModel.md"/>
+            <toc-element topic="Setting-State.md"/>
+            <toc-element topic="Setting-Componet.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="Spring.md"/>
 </instance-profile>

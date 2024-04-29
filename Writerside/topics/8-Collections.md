@@ -437,7 +437,7 @@ alphabets.forEach((alphabet) => print(alphabet));
     ```
 
 ## 92. Operations on a map_1
-- **Access a element**
+- **Access an element**
 
     ```Text
     final foods = {
@@ -666,9 +666,9 @@ print(newSets);
 - Map
     - 자주 아이템을 key를 통해 검색하고 사용할 때
 
-## 97. Chanllenges collections
+## 97. Challenges collections
 
 ```Text
-String paragragh = '컴퓨터와 인터넷 코딩 스킬만 가지고 여러분들이 상상하는 크레이지 한 것들을 만들 수 있습니다. 그런데 코딩 스킬을 배우는 방법이 여러 가지가 있어요. 이 중에서 정답은 없습니다.';
-var list = paragragh.split(' ');
+String paragraph = '컴퓨터와 인터넷 코딩 스킬만 가지고 여러분들이 상상하는 크레이지 한 것들을 만들 수 있습니다. 그런데 코딩 스킬을 배우는 방법이 여러 가지가 있어요. 이 중에서 정답은 없습니다.';
+var list = paragraph.split(' ');
 ```

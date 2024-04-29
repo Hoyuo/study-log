@@ -20,7 +20,7 @@
     - `${}`-String안에 statement 사용 시.
     - `${}`이것만 사용하게 되면 resource를 더 잡아먹기 때문에 사용하지 않아야 할 때는 중괄호{}를 빼고 사용하는 것이 좋다.
 
-## 14. Multiline and special charactors in string
+## 14. Multiline and special characters in string
 - `\n` - 띄어쓰기
 - `\u` - 유니코드 /숫자 4자리까지만 인식을 하기 때문에 숫자 4자리 이상의 코드는 중괄호{}를 넣어준다.
 - 각각의 띄어쓰기를 해주고 싶은데 `\n`을 쓰기 싫을땐, 띄어쓰기를 포함한 텍스트를 하면 된다.

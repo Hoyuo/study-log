@@ -327,7 +327,7 @@ class User {
   ```Text
   late final int _secretNumber = _calculateSecret();
   
-  //또는class User {
+  // 또는 class User {
     User(this.name) {
       _secretNumber = _calculateSecret();
     }

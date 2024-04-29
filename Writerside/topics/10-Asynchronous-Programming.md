@@ -73,7 +73,7 @@ try {
 
 [DummyJSON - Fake REST API of JSON data for development](https://dummyjson.com/)
 
-qutoe를 이용해서 진행해 봅시다
+quote 를 이용해서 진행해 봅시다
 
 ```bash
 $dart pug get http

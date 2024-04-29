@@ -84,7 +84,7 @@ class HyundaiCars extends Car {
 
 ## 104. Abstract class
 - Car 처럼 너무 일반적인 속성을 가진 class를 abstract class로 선언한다
-- ex) Food, Person…..
+- ex. Food, Person…..
 - body가 없는 함수를 선언해서 extends하는 곳에서 구현해야 한다.
 
 ## 105. Interface
@@ -122,7 +122,7 @@ class WebSocket implements DataRepository {
     }
     ```
 
-2. DigitalCamera 클래스를 Camera를 implement 해서 생성, “png image file”라는 문구를 shoot메서드를 통해 출력
+2. DigitalCamera 클래스를 Camera를 implement 해서 생성, “png image file”라는 문구를 `shoot`메서드를 통해 출력
 
     ```Text
     class DigitalCamera implements Camera {

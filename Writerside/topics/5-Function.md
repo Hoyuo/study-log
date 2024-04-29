@@ -1,7 +1,7 @@
 # 5. Function
 
 ## 35. Why use function
-- fuction, method, 함수 다 같은 뜻이다. 구분하지 말아라.
+- function, method, 함수 다 같은 뜻이다. 구분하지 말아라.
 - function이 왜 필요하고, 프로그래밍에서 중요하게 여기는가?
 - 서로 다른 3종류의 차 엔진이 모두 같은 엔진이 들어간다고 가정.
 - 서로 똑같은 엔진인데 라인을 3개 만들어 줬음.
@@ -97,7 +97,7 @@
   };
   ```
 
-## 43. Delcare anonymous function
+## 43. Declare anonymous function
 - function 사용.
 - ForEachCopy를 명시하고 사용한 부분. fnct를 declare한 부분(body가 있는 부분)을 어떻게 기능을 하는지?
 

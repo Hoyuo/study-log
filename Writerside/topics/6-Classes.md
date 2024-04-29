@@ -106,7 +106,7 @@ Tesla.defaultOption() {
 
 ## 56. Forward constructor
 - 기본 값을 데이터 생성을 해 주면서 color와 batterySize를 지정해줬었는데, 기본값을 지워주고 변수만 생성해 주면 빨간줄이 생긴다.
-- 왜냐하면 'this.color'로 색을 주어줬는데 중요한 것은 int라는 변수, batterySize가 int 뒤에 물음표가 없기 떄문에 null이 될 수 없다. 즉, 빈 변수로 생성될 수 없다는 것이다. = '?'를 사용하면 빨간 줄이 사라진다.
+- 왜냐하면 `this.color`로 색을 주어줬는데 중요한 것은 int라는 변수, batterySize가 int 뒤에 물음표가 없기 떄문에 null이 될 수 없다. 즉, 빈 변수로 생성될 수 없다는 것이다. = '?'를 사용하면 빨간 줄이 사라진다.
 - 예를 들어, Null을 원하지 않고 데이터가 지정되어야 한다면,
 
 ```Text
