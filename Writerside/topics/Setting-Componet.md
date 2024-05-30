@@ -1,4 +1,4 @@
-# Setting-Componet
+# Setting-Component
 
 * SettingItem
 

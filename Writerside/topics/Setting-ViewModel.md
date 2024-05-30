@@ -4,23 +4,23 @@
 class SettingsViewModel : ViewModel() {
     val uiState = MutableStateFlow(SettingsState())
 
-    fun toggleNotificationSetting() {
+    private fun toggleNotificationSetting() {
         uiState.value = uiState.value.copy(notificationEnabled = !uiState.value.notificationEnabled)
     }
 
-    fun toggleHintsSetting() {
+    private fun toggleHintsSetting() {
         uiState.value = uiState.value.copy(hintsEnabled = !uiState.value.hintsEnabled)
     }
 
-    fun setMarketingOption(option: MarketingOption) {
+    private fun setMarketingOption(option: MarketingOption) {
         uiState.value = uiState.value.copy(marketingOption = option)
     }
 
-    fun setThemeOption(option: Theme) {
+    private fun setThemeOption(option: Theme) {
         uiState.value = uiState.value.copy(themeOption = option)
     }
 
-    fun sendEvent(event: SettingsEvent) {
+    fun handleEvent(event: SettingsEvent) {
         when (event) {
             is SettingsEvent.ToggleNotificationSetting -> toggleNotificationSetting()
             is SettingsEvent.ToggleHintsSetting -> toggleHintsSetting()

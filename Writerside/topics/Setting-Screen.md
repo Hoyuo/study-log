@@ -5,11 +5,11 @@
 fun SettingsScreen(
     viewModel: SettingsViewModel = viewModel()
 ) {
-    val state = viewModel.uiState.collectAsState().value
+    val state by viewModel.uiState.collectAsState()
 
     SettingsList(
         settings = state,
-        onEvent = viewModel::sendEvent,
+        handleEvent = viewModel::handleEvent,
     )
 }
 
@@ -17,13 +17,13 @@ fun SettingsScreen(
 fun SettingsList(
     settings: SettingsState,
     modifier: Modifier = Modifier,
-    onEvent: (SettingsEvent) -> Unit,
+    handleEvent: (event: SettingsEvent) -> Unit,
 ) {
     Scaffold(
         topBar = {
             SettingTopAppBar(
                 title = stringResource(id = R.string.title_settings),
-                onBack = { onEvent(SettingsEvent.Back) },
+                onBack = { handleEvent(SettingsEvent.Back) },
             )
         },
     ) { _ ->
@@ -34,14 +34,14 @@ fun SettingsList(
                 modifier = Modifier.fillMaxWidth(),
                 title = stringResource(id = R.string.setting_enable_notifications),
                 checked = settings.notificationEnabled,
-                onCheckedChange = { onEvent(SettingsEvent.ToggleNotificationSetting) },
+                onCheckedChange = { handleEvent(SettingsEvent.ToggleNotificationSetting) },
             )
             Divider()
             HintSettingsItem(
                 modifier = Modifier.fillMaxWidth(),
                 title = stringResource(id = R.string.setting_show_hints),
                 checked = settings.hintsEnabled,
-                onShowHintsToggle = { onEvent(SettingsEvent.ToggleHintsSetting) },
+                onShowHintsToggle = { handleEvent(SettingsEvent.ToggleHintsSetting) },
             )
             Divider()
             ManageSubscriptionSettingItem(
@@ -55,14 +55,14 @@ fun SettingsList(
                 modifier = Modifier.fillMaxWidth(),
                 title = stringResource(id = R.string.setting_option_marketing),
                 selectedOption = settings.marketingOption,
-                onOptionSelected = { option -> onEvent(SettingsEvent.SetMarketingOption(option)) },
+                onOptionSelected = { option -> handleEvent(SettingsEvent.SetMarketingOption(option)) },
             )
             Divider()
             ThemeSettingItem(
                 modifier = Modifier.fillMaxWidth(),
                 title = stringResource(id = R.string.setting_option_theme),
                 selectedTheme = settings.themeOption,
-                onOptionSelected = { option -> onEvent(SettingsEvent.SetThemeOption(option)) },
+                onOptionSelected = { option -> handleEvent(SettingsEvent.SetThemeOption(option)) },
             )
             SectionSpacer(modifier = Modifier.fillMaxWidth())
             AppVersionSettingItem(
